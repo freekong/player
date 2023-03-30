@@ -1,0 +1,14 @@
+prefix=/home/lighthouse/wasm/ffmpeg/ffmpeg-4.4/../decoder_wasm/ffmpeg
+exec_prefix=${prefix}
+libdir=/home/lighthouse/wasm/ffmpeg/ffmpeg-4.4/../decoder_wasm/ffmpeg/lib
+includedir=/home/lighthouse/wasm/ffmpeg/ffmpeg-4.4/../decoder_wasm/ffmpeg/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.134.100
+Requires: libswresample >= 3.9.100, libavutil >= 56.70.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavcodec -pthread -lm
+Libs.private: 
+Cflags: -I${includedir}

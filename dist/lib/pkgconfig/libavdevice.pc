@@ -1,0 +1,14 @@
+prefix=/home/lighthouse/wasm/ffmpeg/ffmpeg-4.4/../decoder_wasm/ffmpeg
+exec_prefix=${prefix}
+libdir=/home/lighthouse/wasm/ffmpeg/ffmpeg-4.4/../decoder_wasm/ffmpeg/lib
+includedir=/home/lighthouse/wasm/ffmpeg/ffmpeg-4.4/../decoder_wasm/ffmpeg/include
+
+Name: libavdevice
+Description: FFmpeg device handling library
+Version: 58.13.100
+Requires: libavformat >= 58.76.100, libavcodec >= 58.134.100, libswresample >= 3.9.100, libavutil >= 56.70.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavdevice -lm
+Libs.private: 
+Cflags: -I${includedir}

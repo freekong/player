@@ -1,0 +1,14 @@
+prefix=/home/lighthouse/wasm/ffmpeg/ffmpeg-4.4/../decoder_wasm/ffmpeg
+exec_prefix=${prefix}
+libdir=/home/lighthouse/wasm/ffmpeg/ffmpeg-4.4/../decoder_wasm/ffmpeg/lib
+includedir=/home/lighthouse/wasm/ffmpeg/ffmpeg-4.4/../decoder_wasm/ffmpeg/include
+
+Name: libswscale
+Description: FFmpeg image rescaling library
+Version: 5.9.100
+Requires: libavutil >= 56.70.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lswscale -lm
+Libs.private: 
+Cflags: -I${includedir}
